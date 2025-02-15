@@ -1,3 +1,8 @@
+import pkgutil
+
+if not hasattr(pkgutil, "ImpImporter"):
+    pkgutil.ImpImporter = pkgutil.zipimporter
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -666,7 +671,7 @@ def main():
             // Asynchronously calls the Gemini API
             async function getChatbotResponse(query) {
                 // Replace with your actual Gemini API endpoint
-                const apiEndpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=GEMINI_API_KEY";
+                const apiEndpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDMomklmZmMiNvekbkzsztLxAvX3t95NUI";
                 // Replace with your actual API key
                 const apiKey = "AIzaSyDMomklmZmMiNvekbkzsztLxAvX3t95NUI";
                 
